@@ -27,6 +27,8 @@ for (var tX = 0; tX < RoomWidth(); tX++){
 				var screenX = TileToScreenX(x / GRID_SZ, y / GRID_SZ);
 				var screenY = TileToScreenY(x / GRID_SZ, y / GRID_SZ);
 				var tile = global.theMap[# tileX, tileY];
+				var tileZ = tile[TILE.Z] * -GRID_SZ
+				draw_sprite_ext(shadow, 0, screenX, screenY + tileZ, 1, 1, 0, c_white, 0.5);
 				draw_sprite(character, 0, screenX, screenY + z);
 			}
 		}

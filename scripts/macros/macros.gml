@@ -3,6 +3,8 @@
 #macro SCREEN_W 320
 #macro SCREEN_H 240
 #macro GRID_SZ 16
+#macro GRAVITY 35
+#macro JUMP -400
 
 enum TILE
 {
