@@ -7,13 +7,10 @@ if (keyboard_check(vk_left)) x -= vel;
 if (keyboard_check(vk_up)) y -= vel;
 if (keyboard_check(vk_down)) y += vel;
 
-// Get New Tile
+// Get current overlapping tile
 var tileX = floor(x / GRID_SZ);
 var tileY = floor(y / GRID_SZ);
+var tile = global.theMap[# tileX, tileY];
 
-// Check if we update our global objects
-if (tileX != lastX || tileY != lastY){
-	// Update lastX/lastY
-	lastX = tileX;
-	lastY = tileY;
-}
+// Set Z
+z = tile[TILE.Z] * -GRID_SZ

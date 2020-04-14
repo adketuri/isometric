@@ -12,7 +12,7 @@ for (var tX = 0; tX < RoomWidth(); tX++){
 		// Format: [Sprite, Z]
 		var thisTile = [-1, 0];
 		thisTile[TILE.SPRITE] = (tileMapData + 1) % 2 + 1;
-		thisTile[TILE.Z] = (tileMapData - 1) / 2;
+		thisTile[TILE.Z] = floor((tileMapData - 1) / 2);
 		global.theMap[# tX, tY] = thisTile;
 	}
 }

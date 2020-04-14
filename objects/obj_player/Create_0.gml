@@ -1,4 +1,2 @@
-/// @description Insert description here
-
-lastX = -1;
-lastY = -1;
+/// @description Initialize player
+z = 0
