@@ -1,0 +1,1 @@
+return floor(room_width / GRID_SZ);

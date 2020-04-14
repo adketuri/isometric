@@ -1,8 +1,8 @@
 /// @description Render our game map
 var tileData, screenX, screenY, tileIndex, tileZ;
 
-for (var tX = 0; tX < MAP_W; tX++){
-	for (var tY = 0; tY < MAP_H; tY++){
+for (var tX = 0; tX < RoomWidth(); tX++){
+	for (var tY = 0; tY < RoomHeight(); tY++){
 		tileData = global.theMap[# tX, tY];
 		screenX = TileToScreenX(tX, tY); 
 		screenY = TileToScreenY(tX, tY);
@@ -22,7 +22,7 @@ for (var tX = 0; tX < MAP_W; tX++){
 			with (player) {
 				var tileX = floor(x / GRID_SZ);
 				var tileY = floor(y / GRID_SZ);
-				//show_debug_message("YO " + string(tileX) + " " + string(tileY) + " " + string(tX) + " " + string(tY));
+				
 				if (tileX != tX || tileY != tY) break;
 				var screenX = TileToScreenX(x / GRID_SZ, y / GRID_SZ);
 				var screenY = TileToScreenY(x / GRID_SZ, y / GRID_SZ);
@@ -30,12 +30,5 @@ for (var tX = 0; tX < MAP_W; tX++){
 				draw_sprite(character, 0, screenX, screenY - tile[TILE.Z] * GRID_SZ);
 			}
 		}
-		
-		//var objects = global.mapObjects[# tX, tY];
-		//for (var i = 0; i < array_length_1d(objects); i++){
-		//	if (objects[i] == 0) break;
-		//	show_debug_message("YO " + string(objects));
-		//}
-		
 	}
 }

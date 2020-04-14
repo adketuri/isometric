@@ -1,2 +1,0 @@
-/// @description Render our player
-

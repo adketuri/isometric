@@ -13,28 +13,6 @@ var tileY = floor(y / GRID_SZ);
 
 // Check if we update our global objects
 if (tileX != lastX || tileY != lastY){
-	
-	// Remove old reference
-	var last = global.mapObjects[# lastX, lastY];
-	show_debug_message("last " + string(last));
-	for (var i = 0; i < array_length_1d(last); i++){
-		if (last[i] == id){
-			show_debug_message("REMOVE ID " + string(id));
-			last[i] = 0;	
-			break;
-		}
-	}
-	
-	// Add new reference
-	var objects = global.mapObjects[# tileX, tileY];
-	for (var i = 0; i < array_length_1d(objects); i++){
-		if (objects[i] == 0){
-			show_debug_message("SET ID " + string(id));
-			objects[i] = id;	
-			break;
-		}
-	}
-
 	// Update lastX/lastY
 	lastX = tileX;
 	lastY = tileY;

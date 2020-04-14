@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "11af4a6c-6ef8-4da9-9573-1040a3580e17",
+            "Value": {
+                "id": "8558143f-b1ec-4f73-9c7c-f68c53798585",
+                "resourcePath": "scripts\\RoomWidth\\RoomWidth.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1707e9a5-87c3-4c9b-9dab-2a389184c8a0",
             "Value": {
                 "id": "30c14fd3-868c-4656-be97-b253d68153a2",
@@ -63,11 +71,27 @@
             }
         },
         {
+            "Key": "1b4b0523-2cc9-498f-b894-c165e08de0b4",
+            "Value": {
+                "id": "f1d56da8-fc5f-4e69-925f-2380c8cc43f5",
+                "resourcePath": "objects\\obj_camera\\obj_camera.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "218a5fb3-8c07-4701-b534-330af0a30bbd",
             "Value": {
                 "id": "7b2d55ce-8711-461b-822f-cca6e6a28a55",
                 "resourcePath": "views\\218a5fb3-8c07-4701-b534-330af0a30bbd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "31bf2c69-a940-429f-8175-af9cd6aa6945",
+            "Value": {
+                "id": "c7919375-c2da-48e7-bbd5-0457b08ca6ae",
+                "resourcePath": "scripts\\RoomHeight\\RoomHeight.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -250,7 +274,9 @@
     "script_order": [
         "0e76dcfb-6831-403e-b34f-a780188afcfc",
         "9c26011e-6f6c-456c-887c-0006eff58b9b",
-        "d88fbedc-9e22-41da-8996-b71e345b72a8"
+        "d88fbedc-9e22-41da-8996-b71e345b72a8",
+        "11af4a6c-6ef8-4da9-9573-1040a3580e17",
+        "31bf2c69-a940-429f-8175-af9cd6aa6945"
     ],
     "tutorial": ""
 }

@@ -1,0 +1,1 @@
+return floor(room_height / GRID_SZ);
