@@ -3,12 +3,66 @@
 // Move Player
 var vel = 100 / room_speed;
 
-//show_debug_message("HeightAt " + string(HeightAt(x + vel, y)) + " " + " Z " + string(z));
+var xV = 0;
+var yV = 0;
 
-if (keyboard_check(vk_right) && HeightAt(x + vel, y) >= z) x += vel;
-if (keyboard_check(vk_left) && HeightAt(x - vel, y) >= z) x -= vel;
-if (keyboard_check(vk_up) && HeightAt(x, y - vel) >= z) y -= vel;
-if (keyboard_check(vk_down) && HeightAt(x, y + vel) >= z) y += vel;
+var inputFlags = 0;
+if (keyboard_check(vk_right)){
+	inputFlags = inputFlags | 1
+}
+if (keyboard_check(vk_down)){
+	inputFlags = inputFlags | 2
+}
+if (keyboard_check(vk_left)){
+	inputFlags = inputFlags | 4
+}
+if (keyboard_check(vk_up)){
+	inputFlags = inputFlags | 8
+}
+show_debug_message(inputFlags)
+
+switch (inputFlags){
+	case DIR_N:
+		xV -= vel
+		yV -= vel
+		break;
+	case DIR_NE:
+		yV -= vel
+		break;
+	case DIR_E:
+		xV += vel
+		yV -= vel
+		break;
+	case DIR_SE:
+		xV += vel
+		break;
+	case DIR_S:
+		xV += vel
+		yV += vel
+		break;
+	case DIR_SW:
+		yV += vel
+		break;		
+	case DIR_W:
+		xV -= vel
+		yV += vel
+		break;
+	case DIR_NW:
+		xV -= vel
+		break;		
+}
+
+if (xV != 0 && yV != 0){
+	xV /= 2;
+	yV /= 2;
+}
+
+if (HeightAt(x + xV, y) >= z) {
+	x += xV;
+}
+if (HeightAt(x, y + yV) >= z) {
+	y += yV;
+}
 
 if (keyboard_check_pressed(vk_space) && ground){
 	ground = false;
@@ -32,3 +86,6 @@ if (z >= tileZ) {
 	z = tileZ;
 	zV = 0;
 }
+
+// Update Animation
+var oldSprite = sprite_index
