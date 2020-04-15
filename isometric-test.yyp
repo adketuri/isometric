@@ -74,7 +74,15 @@
             "Key": "1707e9a5-87c3-4c9b-9dab-2a389184c8a0",
             "Value": {
                 "id": "30c14fd3-868c-4656-be97-b253d68153a2",
-                "resourcePath": "sprites\\character\\character.yy",
+                "resourcePath": "sprites\\sprite_player_idle\\sprite_player_idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "18a11ef2-ee9d-4df6-8908-da2f61b2910d",
+            "Value": {
+                "id": "73a1e04c-18c9-48e7-a3e7-078b4c378925",
+                "resourcePath": "sprites\\sprite_player_walk\\sprite_player_walk.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -116,6 +124,14 @@
                 "id": "fe9d397f-e4be-49af-9f34-396cf2427a5b",
                 "resourcePath": "views\\4ad4d2dc-e0b7-4bd2-9b7e-a72e213e14ae.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "4b0240bb-7069-46ae-a96b-8f116ab05953",
+            "Value": {
+                "id": "de012e25-ca52-45c4-9cca-45378d49bcfe",
+                "resourcePath": "scripts\\PlayerAnimateSprite\\PlayerAnimateSprite.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -231,6 +247,14 @@
             }
         },
         {
+            "Key": "c9a00405-9a00-4fc4-aa56-dfd59b7d475a",
+            "Value": {
+                "id": "90a8f32f-750b-45b2-a6ce-4c12fc28a827",
+                "resourcePath": "views\\c9a00405-9a00-4fc4-aa56-dfd59b7d475a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "fbb0ad09-b051-4837-af0a-c403aa7f93c3",
@@ -293,7 +317,8 @@
         "d88fbedc-9e22-41da-8996-b71e345b72a8",
         "11af4a6c-6ef8-4da9-9573-1040a3580e17",
         "31bf2c69-a940-429f-8175-af9cd6aa6945",
-        "0ff4a7cd-145e-4ac7-a566-dc61c9ae3bad"
+        "0ff4a7cd-145e-4ac7-a566-dc61c9ae3bad",
+        "4b0240bb-7069-46ae-a96b-8f116ab05953"
     ],
     "tutorial": ""
 }

@@ -19,8 +19,9 @@ if (keyboard_check(vk_left)){
 if (keyboard_check(vk_up)){
 	inputFlags = inputFlags | 8
 }
-show_debug_message(inputFlags)
 
+//show_debug_message(inputFlags)
+var validDirection = true;
 switch (inputFlags){
 	case DIR_N:
 		xV -= vel
@@ -49,7 +50,14 @@ switch (inputFlags){
 		break;
 	case DIR_NW:
 		xV -= vel
-		break;		
+		break;
+	default:
+		validDirection = false;
+		break;
+}
+// Update our facing direction for animations
+if (validDirection){
+	facing = inputFlags;
 }
 
 if (xV != 0 && yV != 0){
@@ -88,4 +96,11 @@ if (z >= tileZ) {
 }
 
 // Update Animation
-var oldSprite = sprite_index
+var _oldSprite = sprite_index;
+if (inputFlags != 0){
+	sprite_index = spriteWalk
+} else {
+	sprite_index = spriteIdle;	
+}
+if (_oldSprite != sprite_index) localFrame = 0;
+PlayerAnimateSprite(facing)

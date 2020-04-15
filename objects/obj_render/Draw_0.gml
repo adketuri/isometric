@@ -29,7 +29,7 @@ for (var tX = 0; tX < RoomWidth(); tX++){
 				var tile = global.theMap[# tileX, tileY];
 				var tileZ = tile[TILE.Z] * -GRID_SZ
 				draw_sprite_ext(shadow, 0, screenX, screenY + tileZ, 1, 1, 0, c_white, 0.5);
-				draw_sprite(character, 0, screenX, screenY + z);
+				draw_sprite(player.sprite_index, player.image_index, screenX, screenY + z);
 			}
 		}
 	}
