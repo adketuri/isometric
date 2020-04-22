@@ -65,10 +65,10 @@ if (xV != 0 && yV != 0){
 	yV /= 2;
 }
 
-if (HeightAt(x + xV, y) >= z) {
+if (HeightAt(x + xV + xPad, y) >= z && HeightAt(x + xV - xPad, y) >= z) {
 	x += xV;
 }
-if (HeightAt(x, y + yV) >= z) {
+if (HeightAt(x, y + yV + yPad) >= z && HeightAt(x, y + yV - yPad) >= z) {
 	y += yV;
 }
 
@@ -77,13 +77,9 @@ if (keyboard_check_pressed(vk_space) && ground){
 	zV = JUMP;
 }
 
-// Get current overlapping tile
-var tileX = floor(x / GRID_SZ);
-var tileY = floor(y / GRID_SZ);
-var tile = global.theMap[# tileX, tileY];
-
 // Set Z
-var tileZ = tile[TILE.Z] * -GRID_SZ;
+var tileZ = min(HeightAt(x + xPad, y), HeightAt(x - xPad, y), HeightAt(x, y + yPad), HeightAt(x, y - yPad));
+
 z += zV / room_speed;
 if (z < tileZ) {
 	ground = false;
